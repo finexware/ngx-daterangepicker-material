@@ -9,14 +9,17 @@
       "projectType": "application",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "demo/dist",
+            "outputPath": {
+              "base": "demo/dist"
+            },
             "index": "demo/src/index.html",
-            "main": "demo/src/main.ts",
             "tsConfig": "demo/src/tsconfig.app.json",
             "aot": true,
-            "polyfills": "demo/src/polyfills.ts",
+            "polyfills": [
+              "demo/src/polyfills.ts"
+            ],
             "assets": [
               "demo/src/assets",
               "demo/src/favicon.ico"
@@ -25,15 +28,14 @@
               "demo/src/styles.scss"
             ],
             "scripts": [],
-            "vendorChunk": true,
             "extractLicenses": false,
-            "buildOptimizer": false,
             "sourceMap": true,
             "optimization": false,
             "namedChunks": true,
             "allowedCommonJsDependencies": [
               "dayjs"
-            ]
+            ],
+            "browser": "demo/src/main.ts"
           },
           "configurations": {
             "production": {
@@ -48,8 +50,6 @@
               "sourceMap": false,
               "namedChunks": false,
               "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
               "fileReplacements": [
                 {
                   "replace": "demo/src/environments/environment.ts",

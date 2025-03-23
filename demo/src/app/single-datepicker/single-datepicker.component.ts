@@ -8,9 +8,10 @@ dayjs.extend(weekday);
 dayjs.locale('fr');
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'single-datepicker',
-  templateUrl: './single-datepicker.component.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'single-datepicker',
+    templateUrl: './single-datepicker.component.html',
+    standalone: false
 })
 export class SingleDatepickerComponent implements OnInit {
   selected = dayjs();

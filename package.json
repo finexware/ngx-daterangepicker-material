@@ -47,24 +47,24 @@
     "url": "https://github.com/fetrarij/ngx-daterangepicker-material.git"
   },
   "peerDependencies": {
-    "dayjs": "^1.11.4"
+    "dayjs": "^1.11.13"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^18.2.15",
+    "@angular-devkit/build-angular": "^19.2.4",
     "@angular-eslint/builder": "19.3.0",
     "@angular-eslint/eslint-plugin": "19.3.0",
     "@angular-eslint/eslint-plugin-template": "19.3.0",
     "@angular-eslint/schematics": "19.3.0",
     "@angular-eslint/template-parser": "19.3.0",
     "@angular/animations": "^19.2.3",
-    "@angular/cli": "^18.2.15",
-    "@angular/cdk": "^18.2.14",
+    "@angular/cli": "^19.2.4",
+    "@angular/cdk": "^19.2.6",
     "@angular/common": "^19.2.3",
     "@angular/compiler": "^19.2.3",
-    "@angular/core": "^18.2.13",
+    "@angular/core": "^19.2.3",
     "@angular/forms": "^19.2.3",
     "@angular/compiler-cli": "^19.2.3",
-    "@angular/material": "^18.2.14",
+    "@angular/material": "^19.2.6",
     "@angular/platform-browser": "^19.2.3",
     "@angular/platform-browser-dynamic": "^19.2.3",
     "@angular/router": "^19.2.3",
@@ -92,14 +92,14 @@
     "karma-jasmine": "~5.0.0",
     "karma-jasmine-html-reporter": "~2.0.0",
     "materialize-css": "^1.0.0",
-    "ng-packagr": "^18.2.1",
+    "ng-packagr": "^19.2.0",
     "prettier": "^2.7.1",
     "prettier-eslint": "^15.0.1",
     "rimraf": "^2.6.1",
     "rxjs": "^6.3.3",
     "ts-node": "~8.3.0",
     "typescript": "^5.8.2",
-    "zone.js": "~0.14.10"
+    "zone.js": "~0.15.0"
   },
   "dependencies": {
     "dayjs": "^1.11.5",

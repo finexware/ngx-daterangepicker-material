@@ -24,15 +24,16 @@ import { LocaleConfig } from './daterangepicker.config';
 import { LocaleService } from './locale.service';
 
 @Directive({
-  // eslint-disable-next-line @angular-eslint/directive-selector
-  selector: 'input[ngxDaterangepickerMd]',
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => DaterangepickerDirective),
-      multi: true
-    }
-  ]
+    // eslint-disable-next-line @angular-eslint/directive-selector
+    selector: 'input[ngxDaterangepickerMd]',
+    providers: [
+        {
+            provide: NG_VALUE_ACCESSOR,
+            useExisting: forwardRef(() => DaterangepickerDirective),
+            multi: true
+        }
+    ],
+    standalone: false
 })
 // eslint-disable-next-line @angular-eslint/no-conflicting-lifecycle
 export class DaterangepickerDirective implements OnInit, OnChanges, DoCheck {

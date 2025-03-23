@@ -5,9 +5,10 @@ import { EndDate, StartDate } from '../../../../src/daterangepicker/daterangepic
 import { LocaleConfig } from '../../../../src/daterangepicker';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'full',
-  templateUrl: './full.component.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'full',
+    templateUrl: './full.component.html',
+    standalone: false
 })
 export class FullComponent implements OnInit {
   @ViewChild(DaterangepickerDirective, { static: true }) daterangepicker: DaterangepickerDirective;

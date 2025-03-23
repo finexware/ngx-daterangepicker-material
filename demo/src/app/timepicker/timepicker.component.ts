@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import dayjs from 'dayjs/esm';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'timepicker',
-  templateUrl: './timepicker.component.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'timepicker',
+    templateUrl: './timepicker.component.html',
+    standalone: false
 })
 export class TimepickerComponent {
   selected: { startDate: dayjs.Dayjs; endDate: dayjs.Dayjs };

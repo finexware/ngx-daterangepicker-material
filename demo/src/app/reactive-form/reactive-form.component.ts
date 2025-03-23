@@ -4,9 +4,10 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { LocaleConfig } from '../../../../src/daterangepicker';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'reactive-form',
-  templateUrl: './reactive-form.component.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'reactive-form',
+    templateUrl: './reactive-form.component.html',
+    standalone: false
 })
 export class ReactiveFormComponent {
   form: FormGroup;

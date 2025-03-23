@@ -6,9 +6,10 @@ import { DaterangepickerDirective } from '../../../../src/daterangepicker';
 dayjs.extend(utc);
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'locale',
-  templateUrl: './locale.component.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'locale',
+    templateUrl: './locale.component.html',
+    standalone: false
 })
 export class LocaleComponent implements OnInit {
   selected: { startDate: dayjs.Dayjs; endDate: dayjs.Dayjs };

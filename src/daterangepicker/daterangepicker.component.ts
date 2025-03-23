@@ -14,16 +14,16 @@ import {
   ViewEncapsulation
 } from '@angular/core';
 import { FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
-import dayjs, { Dayjs } from 'dayjs/esm';
+import dayjs, { type Dayjs } from 'dayjs';
 import { LocaleConfig } from './daterangepicker.config';
 import { LocaleService } from './locale.service';
 
-import localeData from 'dayjs/esm/plugin/localeData';
-import LocalizedFormat from 'dayjs/esm/plugin/localizedFormat';
-import isoWeek from 'dayjs/esm/plugin/isoWeek';
-import week from 'dayjs/esm/plugin/weekOfYear';
-import customParseFormat from 'dayjs/esm/plugin/customParseFormat';
-import utc from 'dayjs/esm/plugin/utc';
+import localeData from 'dayjs/plugin/localeData';
+import LocalizedFormat from 'dayjs/plugin/localizedFormat';
+import isoWeek from 'dayjs/plugin/isoWeek';
+import week from 'dayjs/plugin/weekOfYear';
+import customParseFormat from 'dayjs/plugin/customParseFormat';
+import utc from 'dayjs/plugin/utc';
 
 dayjs.extend(localeData);
 dayjs.extend(LocalizedFormat);
@@ -38,7 +38,7 @@ export enum SideEnum {
 }
 
 export interface DateRanges {
-  [index: string]: [Dayjs, Dayjs];
+  [index: string]: [dayjs.Dayjs, dayjs.Dayjs];
 }
 
 export interface DateRange {
@@ -144,17 +144,18 @@ interface VisibleCalendar {
 }
 
 @Component({
-  selector: 'ngx-daterangepicker-material',
-  styleUrls: ['./daterangepicker.component.scss'],
-  templateUrl: './daterangepicker.component.html',
-  encapsulation: ViewEncapsulation.None,
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => DaterangepickerComponent),
-      multi: true
-    }
-  ]
+    selector: 'ngx-daterangepicker-material',
+    styleUrls: ['./daterangepicker.component.scss'],
+    templateUrl: './daterangepicker.component.html',
+    encapsulation: ViewEncapsulation.None,
+    providers: [
+        {
+            provide: NG_VALUE_ACCESSOR,
+            useExisting: forwardRef(() => DaterangepickerComponent),
+            multi: true
+        }
+    ],
+    standalone: false
 })
 export class DaterangepickerComponent implements OnInit, OnChanges {
   @Input()
@@ -844,7 +845,7 @@ export class DaterangepickerComponent implements OnInit, OnChanges {
         return;
       }
       if (this.startDate) {
-        // we want to stay on whatever months are in view if date range is set and both calendar sides have a month already.  e.g. when 
+        // we want to stay on whatever months are in view if date range is set and both calendar sides have a month already.  e.g. when
         // user clicks on the end date, we want to stay on current month in view
         if (this.leftCalendar.month && this.rightCalendar.month) {
           return;
@@ -1451,9 +1452,9 @@ export class DaterangepickerComponent implements OnInit, OnChanges {
     this.locale = { ...this.localeHolderService.config, ...this.locale };
     if (!this.locale.format) {
       if (this.timePicker) {
-        this.locale.format = dayjs.localeData().longDateFormat('lll');
+        this.locale.format = dayjs().localeData().longDateFormat('lll');
       } else {
-        this.locale.format = dayjs.localeData().longDateFormat('L');
+        this.locale.format = dayjs().localeData().longDateFormat('L');
       }
     }
   }
