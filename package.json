@@ -61,7 +61,7 @@
     "@angular/cdk": "^16.2.14",
     "@angular/common": "^17.3.12",
     "@angular/compiler": "^17.3.12",
-    "@angular/core": "^16.2.12",
+    "@angular/core": "^17.3.12",
     "@angular/forms": "^17.3.12",
     "@angular/compiler-cli": "^17.3.12",
     "@angular/material": "^16.2.14",
@@ -99,7 +99,7 @@
     "rxjs": "^6.3.3",
     "ts-node": "~8.3.0",
     "typescript": "^5.4.5",
-    "zone.js": "~0.13.3"
+    "zone.js": "~0.14.10"
   },
   "dependencies": {
     "dayjs": "^1.11.5",
